@@ -11,6 +11,9 @@ pandas = "^2.2.2"
 pyodbc = "^5.1.0"
 
 
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
