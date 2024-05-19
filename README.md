@@ -1,1 +1,1 @@
-Het zijn onz project
+Het is onze project
