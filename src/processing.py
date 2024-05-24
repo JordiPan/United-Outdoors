@@ -1,6 +1,5 @@
 import pandas as pd
 import pyodbc
-import sqlite3
 import warnings
 warnings.simplefilter('ignore')
 from settings import settings
