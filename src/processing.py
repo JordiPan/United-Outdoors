@@ -7,19 +7,15 @@ from settings import settings
 from datetime import datetime
 def process():
     
-    # servername verander naar jouw eigen
-    servername = 'LAPTOP-C1FMPSTV\\SQLEXPRESS01'
-
     # Northwind, Adventureworks， Aenc en datawarehouse connectie
-    northwind_conn = pyodbc.connect('DRIVER={SQL SERVER};SERVER='+servername+';DATABASE=NorthWind; Trusted_Connection=yes')
+    northwind_conn = pyodbc.connect('DRIVER={SQL SERVER};SERVER='+settings.servername+';DATABASE=NorthWind; Trusted_Connection=yes')
     nwCursor = northwind_conn.cursor()
-    adventureworks_conn = pyodbc.connect('DRIVER={SQL SERVER};SERVER='+servername+';DATABASE=AdventureWorks2019; Trusted_Connection=yes')
+    adventureworks_conn = pyodbc.connect('DRIVER={SQL SERVER};SERVER='+settings.servername+';DATABASE=AdventureWorks2019; Trusted_Connection=yes')
     awCursor = adventureworks_conn.cursor()
-    aenc_fild = str(settings.processeddir /'aenc.accdb')
-    aenc_conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+aenc_fild)
+    aenc_file = str(settings.processeddir /'aenc.accdb')
+    aenc_conn = pyodbc.connect('DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+aenc_file)
     aencCursor = aenc_conn.cursor()
-    database = "UnitedOutdoors"
-    export_conn = pyodbc.connect("DRIVER={SQL SERVER};SERVER="+servername + ";DATABASE="+database+";Trusted_Connection=yes")
+    export_conn = pyodbc.connect("DRIVER={SQL SERVER};SERVER="+settings.servername + ";DATABASE="+settings.database+";Trusted_Connection=yes")
     export_cursor = export_conn.cursor()
 
     #Product data input naar datawarehouse
