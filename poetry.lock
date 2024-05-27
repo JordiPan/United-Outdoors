@@ -1421,8 +1421,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-<<<<<<< HEAD
-content-hash = "19068a39492f5b08b330259cf74eee2b6cbe251639b7f0b37c4c24c6db0d0bef"
-=======
-content-hash = "2cc6440a2101d7bb6a2c122096387f24408df540a00245532b708232d3215196"
->>>>>>> Cluster
+content-hash = "3a8371f23da0254e6a88463e50c5c3d42bb7acc54aa35a1433f2a23b6474c2f1"
