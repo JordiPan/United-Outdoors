@@ -5,7 +5,7 @@ class Settings():
     basedir = Path.cwd()
     processeddir = Path("../data/raw/")
     logdir = basedir / "log"
-    servername = 'LAPTOP-RPEMJO16\SQLEXPRESS'
+    servername = 'LAPTOP-4SN45QMD\SQLEXPRESS'
     database = 'UnitedOutdoors'
 
 settings = Settings()
