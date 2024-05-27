@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkocht production</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Verkocht production</h1>
+    <div id="plot"></div>
+    <button onclick="sortData('year')">Sort by jaar</button>
+    <button onclick="sortData('quantity')">Sort by quantity</button>
+
+    <script>
+        var graphJSON = {{ graphJSON | tojson }};
+        Plotly.newPlot('plot', JSON.parse(graphJSON));
+
+        function sortData(sortType) {
+            window.location.href = '/sort/' + sortType;
+        }
+    </script>
+</body>
+</html>
